@@ -1,7 +1,7 @@
 package com.ds.entity;
 
 import java.io.Serializable;
-import java.util.Set;
+import java.util.List;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -11,6 +11,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
+import javax.persistence.OrderBy;
 import javax.persistence.Table;
 
 import org.hibernate.annotations.GenericGenerator;
@@ -36,8 +37,9 @@ public class Problem implements Serializable {
 	private String problemname;
 
 	//bi-directional many-to-one association to Comment
-	@OneToMany(mappedBy="problem", cascade={CascadeType.ALL}, fetch=FetchType.EAGER)//根据题目直接计算出该题目评论的数目
-	private Set<Comment> comments;
+	@OneToMany(mappedBy="problem", cascade={CascadeType.ALL}, fetch=FetchType.LAZY)//根据题目直接计算出该题目评论的数目
+	@OrderBy(value="ctime ASC")
+	private List<Comment> comments;
 
 	public Problem() {
 	}
@@ -57,12 +59,13 @@ public class Problem implements Serializable {
 	public void setProblemname(String problemname) {
 		this.problemname = problemname;
 	}
+	
 
-	public Set<Comment> getComments() {
-		return this.comments;
+	public List<Comment> getComments() {
+		return comments;
 	}
 
-	public void setComments(Set<Comment> comments) {
+	public void setComments(List<Comment> comments) {
 		this.comments = comments;
 	}
 

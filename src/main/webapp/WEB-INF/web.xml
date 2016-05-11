@@ -14,10 +14,6 @@
              <param-value>classpath:/config/applicationContext.xml</param-value>
          </context-param>
 
-         <!-- Spring监听 -->
-         <listener>
-             <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
-         </listener>
          
          <filter>
    			 <filter-name>accessControlFilter</filter-name>
@@ -54,6 +50,11 @@
 		    <filter-name>encodingFilter</filter-name>
 		    <url-pattern>/*</url-pattern>
 		 </filter-mapping>
+
+         <!-- Spring监听 -->
+         <listener>
+             <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+         </listener>
 		 
          <!-- Spring MVC配置 -->
          <servlet>
@@ -62,7 +63,7 @@
              <!-- 自定义spring mvc的配置文件名称和路径 -->
              <init-param>
                   <param-name>contextConfigLocation</param-name>
-                  <param-value>classpath:config/spring-mvc-config.xml</param-value>
+                  <param-value>classpath:/config/spring-mvc-config.xml</param-value>
              </init-param>
              <load-on-startup>1</load-on-startup>
          </servlet>

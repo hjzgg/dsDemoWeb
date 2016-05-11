@@ -14,6 +14,9 @@
 	default-lazy-init="true">
 
 	<description>Spring公共配置</description>
+	
+	<!-- scanner redis properties  --> 
+    <context:property-placeholder location="classpath:/config/application.properties" />
 
 	<!-- 使用annotation 自动注册bean, 并保证@Required、@Autowired的属性被注入 -->
 	<context:component-scan base-package="com.ds">
@@ -24,5 +27,7 @@
 	</context:component-scan>
 	
 	<!-- 引入同文件夹下的redis属性配置文件 -->
-    <!-- <import resource="redis-context.xml"/> -->
+    <import resource="redis-context.xml"/>
+    <!-- 引入同文件夹下的JPA属性配置文件   -->
+    <import resource="applicationContext-jpa.xml"/>
 </beans>

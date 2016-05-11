@@ -2,6 +2,8 @@ package com.ds.entity;
 
 import java.io.Serializable;
 import java.sql.Timestamp;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -92,5 +94,12 @@ public class Comment implements Serializable {
 	public void setUser(User user) {
 		this.user = user;
 	}
-
+	
+	public static List<String> getExcludeString(){
+		List<String> exc = new ArrayList<String>();
+		exc.add("user");
+		exc.add("problem");
+		exc.add("ctime");
+		return exc;
+	}
 }

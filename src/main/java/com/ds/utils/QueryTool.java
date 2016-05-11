@@ -13,9 +13,9 @@ public final class QueryTool {
 	public static PageRequest buildPageRequest(int pageNumber, int pageSize, String sortType){
 		Sort sort = null;
 		if("auto".equals(sortType)) {
-			sort = new Sort(Direction.DESC, "id");
+			sort = new Sort(Direction.ASC, "ctime");
 		} else {
-			sort = new Sort(Direction.ASC, "title");
+			sort = new Sort(Direction.ASC, "ctime");
 		}
 		
 		return new PageRequest(pageNumber, pageSize, sort);

@@ -1,6 +1,7 @@
 package com.ds.entity;
 
 import java.io.Serializable;
+import java.util.List;
 import java.util.Set;
 
 import javax.persistence.CascadeType;
@@ -32,7 +33,7 @@ public class User implements Serializable {
 	@Column(name="userid", length=32)
 	private String userid;
 
-	@Column(name="password", length=30)
+	@Column(name="password", length=128)
 	private String password;
 
 	@Column(name="username", length=50)
@@ -40,7 +41,7 @@ public class User implements Serializable {
 
 	//bi-directional many-to-one association to Comment
 	@OneToMany(mappedBy="user", cascade={CascadeType.ALL}, fetch=FetchType.LAZY)
-	private Set<Comment> comments;
+	private List<Comment> comments;
 
 	public User() {
 	}
@@ -69,18 +70,18 @@ public class User implements Serializable {
 		this.username = username;
 	}
 
-	public Set<Comment> getComments() {
-		return this.comments;
+	 
+	public List<Comment> getComments() {
+		return comments;
 	}
 
-	public void setComments(Set<Comment> comments) {
+	public void setComments(List<Comment> comments) {
 		this.comments = comments;
 	}
 
 	public Comment addComment(Comment comment) {
 		getComments().add(comment);
 		comment.setUser(this);
-
 		return comment;
 	}
 

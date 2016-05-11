@@ -50,11 +50,6 @@
     	<version>3.1.0</version>
     </dependency>
     <dependency>
-    	<groupId>org.freemarker</groupId>
-    	<artifactId>freemarker</artifactId>
-    	<version>2.3.20</version>
-    </dependency>
-    <dependency>
     	<groupId>org.springframework</groupId>
     	<artifactId>spring-context-support</artifactId>
     	<version>4.1.9.RELEASE</version>
@@ -139,6 +134,39 @@
 	      <groupId>redis.clients</groupId>
 	      <artifactId>jedis</artifactId>
 	      <version>2.8.0</version>
+	    </dependency>
+	    
+	    <!-- 数据库连接池  -->
+	    <dependency>
+	      <groupId>commons-dbcp</groupId>
+		  <artifactId>commons-dbcp</artifactId>
+		  <version>1.4</version>
+	    </dependency>
+	    
+	    <!-- Commons Lang这一组API也是提供一些基础的、通用的操作和处理，如自动生成toString()的结果、自动实现hashCode()和equals()方法、数组操作、枚举、日期和时间的处理等等。  -->
+	    <dependency>
+	      <groupId>org.apache.commons</groupId>
+		  <artifactId>commons-lang3</artifactId>
+		  <version>3.4</version>
+	    </dependency>
+	    
+	    <!-- shiro加密算法  -->
+	    <dependency>
+	      <groupId>org.apache.shiro</groupId>
+          <artifactId>shiro-core</artifactId>
+       	  <version>1.2.4</version>
+	    </dependency>
+	    
+	    <dependency>
+	      <groupId>com.alibaba</groupId>
+		  <artifactId>fastjson</artifactId>
+		  <version>1.2.8</version>
+	    </dependency>
+
+	    <dependency>
+	    	<groupId>com.google.collections</groupId>
+	    	<artifactId>google-collections</artifactId>
+	    	<version>1.0</version>
 	    </dependency>
   </dependencies>
   <build>

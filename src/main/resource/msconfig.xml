@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<msconfig>
+<!-- 短信服务参数配置  START-->
+  <sms>
+    <corpId>yyuap_mk</corpId><!-- 账户ID -->
+    <secretKey>05f3b909e2ee9ef630634a18e5c0c6</secretKey><!-- 接口调用秘钥 -->
+    <url>http://umessage.yyuap.com/remote/sendSms.do</url><!-- 短信服务器URL -->
+  </sms>
+<!-- 短信服务参数配置  END-->
+<!-- 消息推送参数配置  START-->
+  <messagepush>
+    <userName>hjzgg</userName><!-- 账户名(即控制台登录名) -->
+    <userKey>f680420f737e358160aa8e273b8dcb</userKey><!-- 远程接口秘钥 -->
+    <url>http://upush.yyuap.com/remote/req.do</url><!-- 消息推送服务器URL -->
+  </messagepush>
+<!-- 消息推送参数配置  END-->
+<!-- 邮件服务发送参数配置  START-->
+  <mail>
+    <userName>hujzh@yonyou.com</userName><!-- 账户名(发件人邮箱账户的账号) -->
+    <password>yonyou2016</password><!-- 密码(发件人邮箱账户的密码) -->
+    <hostName>mail.yonyou.com</hostName><!-- 邮件发送服务器SMTP地址URL -->
+  </mail>
+<!-- 邮件服务参数配置  END-->
+</msconfig>

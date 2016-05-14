@@ -25,7 +25,11 @@ public class AuthorityFilter implements Filter {
 	public void doFilter(ServletRequest req, ServletResponse res,
 			FilterChain chain) throws IOException, ServletException {
 		//µÇÂ¼»òÕß×¢²á²»À¹½Ø
-		if(((HttpServletRequest)req).getServletPath().contains("userLogin") || ((HttpServletRequest)req).getServletPath().contains("userRegister")){
+		if(((HttpServletRequest)req).getServletPath().contains("userLogin") ||
+				((HttpServletRequest)req).getServletPath().contains("userRegister") ||
+				((HttpServletRequest)req).getServletPath().contains("loginCode") || 
+				((HttpServletRequest)req).getServletPath().contains("loginCodeImage") ||
+				((HttpServletRequest)req).getServletPath().contains("images")){
 			chain.doFilter(req, res);
 		} else {
 			String userToken = req.getParameter("userToken");

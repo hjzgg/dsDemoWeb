@@ -13,6 +13,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springside.modules.persistence.SearchFilter.Operator;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.serializer.SimplePropertyPreFilter;
@@ -47,6 +48,7 @@ public class CommentController {
 			commentService.addComment(comment);
 			
 			Map<String, Object> searchParams = new HashMap<String, Object>();
+			searchParams.put(Operator.EQ + "_problem.problemid", problem.getProblemid());
 		    PageRequest pageRequest = QueryTool.buildPageRequest(0, pageSize, "auto");
 		    Specification<Comment> spec = QueryTool.buildSpecification(searchParams, Comment.class);
 		    Page<Comment> page = commentService.findAllComments2(spec, pageRequest);

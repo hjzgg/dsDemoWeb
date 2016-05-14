@@ -168,6 +168,17 @@
 	    	<artifactId>google-collections</artifactId>
 	    	<version>1.0</version>
 	    </dependency>
+	    <!-- 消息推送 -->
+		<dependency>
+		  <groupId>com.yonyou</groupId>
+		  <artifactId>youyou-message-ieop</artifactId>
+		  <version>0.0.5</version>
+		</dependency>
+		<dependency>
+		  <groupId>javax.mail</groupId>
+		  <artifactId>mail</artifactId>
+		  <version>1.5.0-b01</version>
+		</dependency>
   </dependencies>
   <build>
     <finalName>dsdemo</finalName>

@@ -38,6 +38,17 @@ public class User implements Serializable {
 
 	@Column(name="username", length=50)
 	private String username;
+	
+	@Column(name="email", length=50)
+	private String email;
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
 
 	//bi-directional many-to-one association to Comment
 	@OneToMany(mappedBy="user", cascade={CascadeType.ALL}, fetch=FetchType.LAZY)

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<errorCodeDescription>
+<!-- 短信发送返回代码描述  START-->
+  <sms>
+	<description code="1000" content="操作成功"/>
+	<description code="1000" content="操作成功"/>
+	<description code="2001" content="用户名已存在"/>
+	<description code="2002" content="用户未注册"/>
+	<description code="2003" content="密码验证失败"/>
+	<description code="2004" content="秘钥验证失败"/>
+	<description code="2005" content="缺少必要参数"/>
+	<description code="2006" content="余额不足"/>
+	<description code="2007" content="指定的子用户不存在"/>
+	<description code="2008" content="邮箱格式不正确"/>
+	<description code="2009" content="手机号码格式不正确"/>
+	<description code="2010" content="短信内容格式不正确"/>
+	<description code="2011" content="用户暂未通过审核"/>
+	<description code="2012" content="用户未成功激活"/>
+	<description code="2013" content="账户余额异常"/>
+	<description code="2014" content="短信内容超过500字符"/>
+	<description code="5000" content="服务器内部错误"/>
+  </sms>
+<!-- 短信发送返回代码描述  END-->
+
+<!-- 消息推送返回代码描述  START-->
+  <messagepush>
+  	<description code="0" content="推送成功"/>
+	<description code="2000" content="未知错误"/>
+	<description code="2100" content="数据库操作失败"/>
+	<description code="2110" content="没有权限进行此操作"/>
+	<description code="2120" content="身份验证失败"/>
+	<description code="2150" content="提交数据格式不正确"/>
+	<description code="2151" content="提交数据不完整"/>
+	<description code="2152" content="提交数据不合法"/>
+	<description code="2200" content="应用不存在"/>
+	<description code="2201" content="应用已删除"/>
+	<description code="2202" content="应用正在部署中，不能发送消息"/>
+	<description code="2204" content="应用未删除，无需进行恢复删除操作"/>
+	<description code="2210" content="应用Android包名已存在"/>
+	<description code="2211" content="应用Android包名与已删除应用相同 (此时可以进行恢复已删除应用操作)"/>
+	<description code="2310" content="消息不存在"/>
+	<description code="2311" content="消息在操作之前已被删除"/>
+	<description code="2410" content="未找到该标签"/>
+	<description code="2411" content="标签名已存在"/>
+	<description code="2500" content="分组名已存在"/>
+	<description code="2501" content="分组与应用不匹配"/>
+	<description code="2502" content="分组未找到"/>	
+  </messagepush>
+<!-- 消息推送返回代码描述  END-->
+
+<!-- 邮件发送返回代码描述  START-->
+  <mail>
+  </mail>
+<!-- 邮件发送返回代码描述  END-->
+</errorCodeDescription>

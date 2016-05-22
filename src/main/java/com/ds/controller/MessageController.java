@@ -29,8 +29,13 @@ public class MessageController {
 		try {
 			String ipAndPort = InetAddress.getLocalHost().getHostAddress() + ":" + request.getLocalPort();
 			List<MessageResponse> results = messageService.sendEmail(title, content, address, "http://" + ipAndPort + "/dsdemo/");
-			jsono.put("success", true);
-			jsono.put("message", "send email success.");
+			if(results.size() == 0 || results.get(0) == null) {
+				jsono.put("success", false);
+				jsono.put("message", "send email fail.");
+			} else {
+				jsono.put("success", true);
+				jsono.put("message", "send email success.");
+			}
 		} catch (Exception e) {
 			jsono.put("success", false);
 			jsono.put("message", "inner error.");

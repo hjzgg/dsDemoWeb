@@ -1,4 +1,3 @@
-//如果有人想用到这个配置文件，请qq联系我: 2570230521
 <?xml version="1.0" encoding="UTF-8"?>
 <msconfig>
 <!-- 短信服务参数配置  START-->
@@ -18,7 +17,7 @@
 <!-- 邮件服务发送参数配置  START-->
   <mail>
     <userName>15670637914@163.com</userName><!-- 账户名(发件人邮箱账户的账号) -->
-    <password>***</password><!-- 密码(发件人邮箱账户的密码) -->
+    <password>hjzgg5211314</password><!-- 密码(发件人邮箱账户的密码) -->
     <hostName>smtp.163.com</hostName><!-- 邮件发送服务器SMTP地址URL -->
   </mail>
 <!-- 邮件服务参数配置  END-->
